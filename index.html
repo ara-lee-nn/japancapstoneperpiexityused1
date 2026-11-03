@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YENMATE | 일본 ATM 한국어 안내 서비스</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <p class="badge">일본 여행 ATM 가이드</p>
+    <h1>YENMATE</h1>
+    <p class="subtitle">엔화 + MATE<br />일본 ATM, 두려울 게 없어요.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#atm-guide">ATM 사용법 보기</a>
+      <a class="btn ghost" href="#troubleshoot">문제 해결하기</a>
+    </div>
+    <figure class="hero-figure">
+      <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/98f68bf5-3ac6-558d-a6a5-e16374310f94/0ed5ba6e-44c3-50e2-bc98-3d99d8d4515b.jpg" alt="일본 세븐뱅크 ATM 화면과 카드 삽입부" loading="lazy" />
+      <figcaption>일본 7-Eleven 내 세븐뱅크 ATM 화면</figcaption>
+    </figure>
+    <div class="hero-stats">
+      <div><strong>3개</strong><span>주요 ATM 안내</span></div>
+      <div><strong>한국어</strong><span>단계별 화면 안내</span></div>
+      <div><strong>상황별</strong><span>오류 해결 가이드</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="problem">
+    <div class="container">
+      <h2>왜 YENMATE가 필요할까요?</h2>
+      <figure class="section-figure">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/be0d297b-aad8-55b3-bb20-d8ed5a137a47/4a6ddadf-f41e-5d2c-b53b-8d127dab9d13.jpg" alt="이온은행 ATM 이용 과정 사진 모음" loading="lazy" />
+        <figcaption>이온은행 ATM의 언어 선택·카드 삽입·현금 인출 과정</figcaption>
+      </figure>
+      <p class="section-desc">일본 ATM은 은행·편의점 브랜드마다 화면과 절차가 달라 처음 사용하면 혼란스러울 수 있습니다.</p>
+      <div class="cards">
+        <article class="card"><h3>기기별 메뉴 차이</h3><p>세븐뱅크, 이온, 로손 ATM은 첫 화면과 선택 버튼이 서로 다릅니다.</p></article>
+        <article class="card"><h3>비밀번호 오류</h3><p>4자리 비밀번호를 요구하는 ATM에서는 00을 붙여 입력해야 하는 경우가 있습니다.</p></article>
+        <article class="card"><h3>국제카드 선택 실수</h3><p>이온 ATM처럼 언어 변경 전에 International Card를 선택해야 하는 기기가 있습니다.</p></article>
+        <article class="card"><h3>환전 옵션 실수</h3><p>세븐뱅크에서는 ‘지금 환전하지 않고 진행’을 선택해야 불필요한 환전 수수료를 피할 수 있습니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="atm-guide">
+    <div class="container">
+      <h2>ATM별 사용 가이드</h2>
+      <p class="section-desc">아래에서 현재 이용 중인 ATM을 선택하세요.</p>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-atm="seven">세븐뱅크 ATM</button>
+        <button class="tab" data-atm="aeon">이온 ATM</button>
+        <button class="tab" data-atm="lawson">로손 ATM</button>
+      </div>
+      <div id="atm-content" class="guide-panel"></div>
+    </div>
+  </section>
+
+  <section class="section" id="troubleshoot">
+    <div class="container">
+      <h2>상황별 문제 해결</h2>
+      <p class="section-desc">지금 겪고 있는 문제를 선택하면 확인할 행동을 안내해 드립니다.</p>
+      <div class="trouble-layout">
+        <div class="trouble-options">
+          <button class="trouble-btn active" data-issue="pin">비밀번호 오류</button>
+          <button class="trouble-btn" data-issue="intl">국제카드 메뉴를 못 찾음</button>
+          <button class="trouble-btn" data-issue="exchange">환전 옵션이 나옴</button>
+          <button class="trouble-btn" data-issue="limit">출금 한도 초과</button>
+          <button class="trouble-btn" data-issue="card">카드가 인식되지 않음</button>
+        </div>
+        <div id="trouble-result" class="trouble-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="checklist">
+    <div class="container">
+      <h2>출금 전 체크리스트</h2>
+      <p class="section-desc">ATM 앞에서 아래 항목을 확인하세요.</p>
+      <ul class="checklist" id="checklist">
+        <li><label><input type="checkbox" /> 해외 결제 가능한 카드인지 확인</label></li>
+        <li><label><input type="checkbox" /> 카드 뒷면의 비밀번호(PIN)를 확인</label></li>
+        <li><label><input type="checkbox" /> ATM에 국제카드 이용 가능 표시가 있는지 확인</label></li>
+        <li><label><input type="checkbox" /> 결제 통화 선택 시 가능하면 JPY 선택</label></li>
+        <li><label><input type="checkbox" /> 1회 인출 한도와 인출 단위 확인</label></li>
+      </ul>
+      <div class="check-progress">
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+        <p id="progress-text">0 / 5 완료</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>YENMATE</strong> — 일본 여행 ATM 이용자를 위한 단계별 출금·문제 해결 서비스</p>
+    <p class="small">본 사이트는 학습용 기획 시연 페이지이며, 실제 이용 전에는 각 은행의 최신 공식 안내를 확인하세요.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
